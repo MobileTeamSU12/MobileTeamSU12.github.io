@@ -1,20 +1,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Cài đặt MobiMap</title>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-            crossorigin="anonymous"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Cài đặt MobiMap</title>
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/@isomorphic-git/lightning-fs"></script>
+	<script src="https://unpkg.com/isomorphic-git"></script>
+	<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+	<script src="./lib/module.js"></script>
 </head>
 
 <body style="text-align: center; font-family:sans-serif,Candara;height: 100%;">
-    <div class="container">
-        <header
+	<div class="container">
+		<header
                 class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
             <p class="h5 my-0 me-md-auto fw-normal">SUPPORT UAT</p>
             <nav class="my-2 my-md-0 me-md-3">
@@ -26,56 +30,46 @@
         <div class="badge text-wrap text-primary">
             <p class="fs-1"><strong>CÀI ĐẶT MOBIMAP Fcam UAT</strong></p>
         </div>
-        <div class="row">
-            <!-- <div class="col-sm-12 offset-sm-2 col-md-12 offset-md-0">
-                <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/MobiMapVN_UAT.plist"
-                ><img src="https://github.com/MobileTeamSU12/Mobimap_Install_mobimap/blob/main/QR_Code_MobiMap_Install_UAT.png?raw=true"
-                    class="rounded mx-auto d-block img-thumbnail" alt="..."></a>
-                <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/MobiMapVN_UAT.plist"
-                    class="btn btn-primary btn-lg mt-3" tabindex="1" role="button" aria-disabled="false">Cài Đặt
-                    IOS</a>
-            </div> -->
-            <div class="col-sm-12 offset-sm-2 col-md-12 offset-md-0">
-                <a href="./fcam_file_install/FCAM_MobiMap_Adroid_UAT.apk"
-                ><img style="height: 400pt; width: 400pt;"
-                      src="./src/qr_code_fcam_mobimap_install_adroid_uat.svg"
-                      onerror="this.onerror=null; this.src='qr_code_fcam_mobimap_install_adroid_uat.png'"
-                      class="rounded mx-auto d-block img-thumbnail " alt="..."></a>
-                <a href="./fcam_file_install/FCAM_MobiMap_Adroid_UAT.apk"
-                   class="btn btn-primary btn-lg mt-3" tabindex="2" role="button" aria-disabled="false">Cài Đặt
-                    Android</a>
-            </div>
-        </div>
-        <footer class="pt-4 my-md-5 pt-md-5 border-top">
-            <div class="row ">
-                <div class="col-12 col-md ">
-                    <div class="badge bg-primary text-wrap">
-                        <strong>Copyright &copy; 2014 by RAD!</strong>
-                    </div>
-                    <!-- <small class="d-block mb-3 text-muted"> Copyright &copy; 2014 by RAD!</small> -->
+		<div class="row">
+			<div class="col-sm-12 offset-sm-2 col-md-12 offset-md-0">
+				<a id="link_download">
+					<div id="qrcode" style="height: 400pt; width: 400pt;" class="rounded mx-auto d-block img-thumbnail">
+					</div>
+					<!-- <img style="height: 400pt; width: 400pt;" src="./src/qr_code_fcam_mobimap_install_adroid_test.svg"
+						class="rounded mx-auto d-block img-thumbnail " alt="..."> -->
+				</a>
 
-                </div>
-                <!-- <div class="col-6 col-md">
-                    <h5>Version IOS UAT</h5>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="link-secondary" href="#">V3.26.X</a></li>
-                    </ul>
-                </div> -->
-                <div class="col-6 col-md">
-                    <h5>Version ANDROID UAT</h5>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="link-secondary" href="#"></a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md">
-                    <h5>About</h5>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="link-secondary" href="#">Team MOBILE </a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-    </div>
+				<a id="link_download_btn" class="btn btn-primary btn-lg mt-3" tabindex="2" role="button"
+					aria-disabled="false">Cài Đặt
+					Android</a>
+			</div>
+		</div>
+		<footer class="pt-4 my-md-5 pt-md-5 border-top">
+			<div class="row ">
+				<div class="col-12 col-md ">
+					<div class="badge bg-primary text-wrap">
+						<strong>Copyright &copy; 2014 by RAD!</strong>
+					</div>
+				</div>
+				<div class="col-6 col-md">
+					<h5>Version ANDROID TEST</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="link-secondary" href="#"></a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md">
+					<h5>About</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="link-secondary" href="#">Team MOBILE </a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
 </body>
+<script>
+	updateStyleImageQRCode("/fcam_file_install/FCAM_MobiMap_Adroid_UAT.apk")
+</script>
 
 </html>
+
