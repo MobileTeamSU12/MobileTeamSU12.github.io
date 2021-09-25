@@ -10,6 +10,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
 		crossorigin="anonymous"></script>
+	<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+	<script src="./lib/module.js"></script>
 </head>
 
 <body style="text-align: center; font-family:sans-serif,Candara;height: 100%;">
@@ -18,9 +20,9 @@
 			class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
 			<p class="h5 my-0 me-md-auto fw-normal">SUPPORT Version Test </p>
 			<nav class="my-2 my-md-0 me-md-3">
-				<a class="p-2 btn btn-outline-primary" href="https://mobileteamsu12.github.io">Release Fix Bug</a>
-				<a class="p-2 btn btn-outline-primary" href="https://mobileteamsu12.github.io/test">Test</a>
-				<a class="p-2 btn btn-outline-primary" href="https://mobileteamsu12.github.io/uat">UAT</a>
+				<a class="p-2 btn btn-outline-primary" href="./index.html">Release Fix Bug</a>
+				<a class="p-2 btn btn-outline-primary" href="./test.html">Test</a>
+				<a class="p-2 btn btn-outline-primary" href="./uat.html">UAT</a>
 			</nav>
 			<!-- <a class="btn btn-outline-primary" href="#">Sign up</a> -->
 		</header>
@@ -37,14 +39,18 @@
 					class="btn btn-primary btn-lg mt-3" tabindex="1" role="button" aria-disabled="false">Cài Đặt
 					IOS 3.27.0 Test ROUND 2</a>
 			</div>
+			<!-- android layout region -->
 			<div class="col-sm-6 offset-sm-2 col-md-6 offset-md-0">
-				<a href="https://github.com/MobileTeamSU12/Mobimap_Install_mobimap/raw/main/MobiMap_Adroid_test.apk"><img
-						src="https://github.com/MobileTeamSU12/Mobimap_Install_mobimap/blob/main/QR_Code_MobiMap_Install_Adroid_test.png?raw=true"
-						class="rounded mx-auto d-block img-thumbnail " alt="..."></a>
-				<a href="https://github.com/MobileTeamSU12/Mobimap_Install_mobimap/raw/main/MobiMap_Adroid_test.apk"
-					class="btn btn-primary btn-lg mt-3" tabindex="2" role="button" aria-disabled="false">Cài Đặt
-					Android 3.27.0 Test ROUND 2</a>
+				<a id="link_download_qrcode">
+					<div id="qrcode" style="height: 400pt; width: 400pt;" class="rounded mx-auto d-block img-thumbnail">
+					</div>
+				</a>
+				
+				<a id="link_download_btn" class="btn btn-primary btn-lg mt-3" tabindex="2" role="button"
+					aria-disabled="false">Cài Đặt Android
+				</a>
 			</div>
+			<!--/ endregion  -->
 			<div class="col-sm-12 offset-sm-12 col-md-12 offset-md-0">
 				<p>Account</p>
 				<p>tester.ftq1 -- Nhân Viên Đánh giá</p>
@@ -64,13 +70,14 @@
 				<div class="col-6 col-md">
 					<h5>Version IOS Test</h5>
 					<ul class="list-unstyled text-small">
-						<li><a class="link-secondary" href="#">Tool Đánh sao POP  V3.27.0 TEST ROUND 2</a></li>
+						<li><a class="link-secondary" href="#">Tool Đánh sao POP V3.27.0 TEST ROUND 2</a></li>
 					</ul>
 				</div>
 				<div class="col-6 col-md">
 					<h5>Version ANDROID Test</h5>
 					<ul class="list-unstyled text-small">
-						<li><a class="link-secondary" href="#">Tool Đánh sao POP  V3.27.0 TEST ROUND 2</a></li>
+						<li><a class="link-secondary" id="link_download_second" href="#">Tool Đánh sao POP V3.27.0 TEST
+								ROUND 2</a></li>
 					</ul>
 				</div>
 				<div class="col-6 col-md">
@@ -82,5 +89,13 @@
 			</div>
 	</div>
 </body>
+
+<script>
+	let btnSecond = document.getElementById('link_download_second')
+	let btnQrcode = document.getElementById('link_download_qrcode')
+	let btnLink = document.getElementById('link_download_btn')
+	updateInstallLinkAndQRCode("/vn_android_install/MobiMap_Adroid_test.apk", btnQrcode, btnLink, btnSecond)
+</script>
+
 
 </html>
