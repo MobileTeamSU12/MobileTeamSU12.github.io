@@ -68,7 +68,10 @@
 	</div>
 </body>
 <script>
-	updateInstallLinkAndQRCode("/fcam_file_install/FCAM_MobiMap_Adroid.apk")
+	let btnQrcode = document.getElementById('link_download')
+	let btnLink = document.getElementById('link_download_btn')
+
+	updateInstallLinkAndQRCode("/fcam_file_install/FCAM_MobiMap_Adroid.apk", btnQrcode, btnLink)
 </script>
 
 </html>
