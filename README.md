@@ -1,6 +1,16 @@
-# Mobimap_Install_mobimap Release
-https://mobileteamsu12.github.io/vn_android_install/MobiMap_AdnroidRelease.apk
-https://mobileteamsu12.github.io/vn_ios_install/MobiMap_IOSRelease.ipa
+# Upload big file github
++ Step 1: Download and install Git on your pc. https://git-scm.com/downloads
++ Step 02: Then download and install GitLFS on your pc. Download link: https://git-lfs.github.com/
++ Step 03: Add file extensions big file cần upload
+vd: `git lfs track "*.apk"`
++ Step 04: Add file .gitattributes để lần sau sử dụng được tạo khi cmd trên, đã có file này thì ko cần add vào git `git add .gitattributes`
++ Step 05: add và commit sau đó push big file như bình thường. vd: 
+```
+git add file.psd
+git commit -m "Add design file"
+git push origin main
+ ```
+
 # Mobimap_Install_mobimapßßß
 Dùng cài đặt mobiMap Hỗ trợ fix Bug
 https://mobileteamsu12.github.io/index
