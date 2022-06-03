@@ -2,7 +2,7 @@
 + Step 1: Download and install Git on your pc. https://git-scm.com/downloads
 + Step 02: Then download and install GitLFS on your pc. Download link: https://git-lfs.github.com/
 + Step 03: Add file extensions big file cần upload
-vd: `git lfs track "*.apk"`
+vd: `git lfs track "*.apk"` and `git lfs migrate import --include="*.apk"`
 + Step 04: Add file .gitattributes để lần sau sử dụng được tạo khi cmd trên, đã có file này thì ko cần add vào git `git add .gitattributes`
 + Step 05: add và commit sau đó push big file như bình thường. vd: 
 ```
