@@ -10,6 +10,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
 		crossorigin="anonymous"></script>
+	<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 	<script src="./lib/module.js"></script>
 </head>
 
@@ -17,37 +18,45 @@
 	<div class="container">
 		<header
 			class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-			<p class="h5 my-0 me-md-auto fw-normal">SUPPORT</p>
+			<p class="h5 my-0 me-md-auto fw-normal">SUPPORT Version Test </p>
 			<nav class="my-2 my-md-0 me-md-3">
 				<a class="p-2 btn btn-outline-primary" href="./index.html">Release Fix Bug</a>
 				<a class="p-2 btn btn-outline-primary" href="./test.html">Test</a>
 				<a class="p-2 btn btn-outline-primary" href="./uat.html">UAT</a>
 				<a class="p-2 btn btn-outline-primary" href="./csoc.html">Test CSOC</a>
 			</nav>
+			<!-- <a class="btn btn-outline-primary" href="#">Sign up</a> -->
 		</header>
 		<div class="badge text-wrap text-primary">
-			<p class="fs-1"><strong>CÀI ĐẶT MOBIMAP FIX BUG</strong></p>
+			<p class="fs-1"><strong>CÀI ĐẶT MOBIMAP TEST CSOC</strong></p>
 		</div>
 		<div class="row">
 			<div class="col-sm-6 offset-sm-2 col-md-6 offset-md-0">
 				<a
-					href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/MobiMapVN.plist"><img
-						src="https://github.com/MobileTeamSU12/Mobimap_Install_mobimap/blob/main/QR_Code_MobiMap_Install.png?raw=true"
+					href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/MobiMapVN_CSOC.plist"><img
+						src="https://github.com/MobileTeamSU12/Mobimap_Install_mobimap/blob/main/QR_Code_MobiMap_Install_csoc.png?raw=true"
 						class="rounded mx-auto d-block img-thumbnail" alt="..."></a>
-				<a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/MobiMapVN.plist"
+				<a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/MobiMapVN_CSOC.plist"
 					class="btn btn-primary btn-lg mt-3" tabindex="1" role="button" aria-disabled="false">Cài Đặt
-					IOS V3.32</a>
+					IOS 3.31 Test ROUND 1</a>
 			</div>
+			<!-- android layout region -->
 			<div class="col-sm-6 offset-sm-2 col-md-6 offset-md-0">
-				<a id="link_download_qrcode"
-					href="#">
-					<img
-						src="./src/qr_mobimap_android.svg"
-						class="rounded mx-auto d-block img-thumbnail " alt="...">
+				<a id="link_download_qrcode">
+					<div id="qrcode" style="height: 400pt; width: 400pt;" class="rounded mx-auto d-block img-thumbnail">
+					</div>
 				</a>
-				<a href="#" id="link_download_btn" class="btn btn-primary btn-lg mt-3"
-					tabindex="2" role="button" aria-disabled="false">Cài Đặt
-					Android V3.24 Fix bug</a>
+				
+				<a id="link_download_btn" class="btn btn-primary btn-lg mt-3" tabindex="2" role="button"
+					aria-disabled="false">Cài Đặt Android
+				</a>
+			</div>
+			<!--/ endregion  -->
+			<div class="col-sm-12 offset-sm-12 col-md-12 offset-md-0">
+				<p>Account</p>
+				<p>tester.ftq1 -- Nhân Viên Đánh giá</p>
+				<p>tester.ktv -- Nhân Viên cải tạo</p>
+				<p>Mật khẩu: 123456</p>
 			</div>
 		</div>
 		<footer class="pt-4 my-md-5 pt-md-5 border-top">
@@ -60,15 +69,15 @@
 
 				</div>
 				<div class="col-6 col-md">
-					<h5>Version IOS V3.32</h5>
+					<h5>Version IOS Test</h5>
 					<ul class="list-unstyled text-small">
-						<li><a class="link-secondary" href="#">FIX BUG V3.32 Fix bug</a></li>
+						<li><a class="link-secondary" href="#">Tool Ring Trục V3.31 TEST ROUND 1 </a></li>
 					</ul>
 				</div>
 				<div class="col-6 col-md">
-					<h5>Version ANDROID V3.24 KPI Cá nhân</h5>
+					<h5>Version ANDROID Test</h5>
 					<ul class="list-unstyled text-small">
-						<li><a class="link-secondary" href="#">FIX BUG V3.32 </a></li>
+						<li><a class="link-secondary" id="link_download_second" href="#">Tool Ring Trục V3.31 TEST ROUND 1</a></li>
 					</ul>
 				</div>
 				<div class="col-6 col-md">
@@ -80,12 +89,14 @@
 			</div>
 	</div>
 </body>
+
 <script>
-	// let btnSecond = document.getElementById('link_download_second')
+	let btnSecond = document.getElementById('link_download_second')
 	let btnQrcode = document.getElementById('link_download_qrcode')
 	let btnLink = document.getElementById('link_download_btn')
-	updateDownloadLink("/vn_android_install/MobiMap_Android.apk", btnQrcode, btnLink)
-
+	updateInstallLinkAndQRCode("/vn_android_install/MobiMap_Android_test.apk", btnQrcode, btnLink, btnSecond)
+	//generateQRcode("ahihi")
 </script>
+
 
 </html>
