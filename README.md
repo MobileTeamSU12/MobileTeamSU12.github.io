@@ -10,7 +10,8 @@ git add file.psd
 git commit -m "Add design file"
 git push origin main
  ```
-
+# Thống kê thông tin giữa 2 git commit
++ lệnh: `git diff --stat hash_comit1 hash_comit2`
 # Mobimap_Install_mobimapßßß
 Dùng cài đặt mobiMap Hỗ trợ fix Bug
 https://mobileteamsu12.github.io/index
