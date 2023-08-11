@@ -1,0 +1,74 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Cài đặt MobiMap</title>
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+	<script src="./lib/module.js"></script>
+</head>
+
+<body style="text-align: center; font-family:sans-serif,Candara;height: 100%;">
+	<div class="container">
+		<header
+			class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+			<p class="h5 my-0 me-md-auto fw-normal">Các bản cài đặt khác</p>
+			<nav class="my-2 my-md-0 me-md-3">
+				<a class="p-2 btn btn-outline-primary" href="./index.html">Release Fix Bug</a>
+				<a class="p-2 btn btn-outline-primary" href="./test.html">Test</a>
+				<a class="p-2 btn btn-outline-primary" href="./uat.html">UAT</a>
+				<a class="p-2 btn btn-outline-primary" href="./csoc.html">CSOC</a>
+			</nav>
+			<!-- <a class="btn btn-outline-primary" href="#">Sign up</a> -->
+		</header>
+		<div class="badge text-wrap text-primary">
+			<p class="fs-1"><strong>CÀI ĐẶT MOBIMAP</strong></p>
+		</div>
+		<div class="row">
+			<div class="col-sm-6 offset-sm-2 col-md-6 offset-md-0">
+				<a
+					href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/flutter/flutter_fix.plist"><img
+						src="https://github.com/MobileTeamSU12/Mobimap_Install_mobimap/blob/main/flutter/ios_qr_flutter_fix.png?raw=true"
+						class="rounded mx-auto d-block img-thumbnail" alt="..."></a>
+				<a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/flutter/flutter_fix.plist"
+					class="btn btn-primary btn-lg mt-3" tabindex="1" role="button" aria-disabled="false">Cài Đặt IOS
+				</a>
+			</div>
+			<!-- android layout region -->
+			<div class="col-sm-6 offset-sm-2 col-md-6 offset-md-0">
+				<a id="link_download_qrcode">
+					<div id="qrcode" style="height: 400pt; width: 400pt;" class="rounded mx-auto d-block img-thumbnail">
+					</div>
+				</a>
+				
+				<a id="link_download_btn" class="btn btn-primary btn-lg mt-3" tabindex="2" role="button"
+					aria-disabled="false">Cài Đặt Android
+				</a>
+			</div>
+			<!--/ endregion  -->
+			<div class="col-sm-12 offset-sm-12 col-md-12 offset-md-0">
+				<!-- <p>Account</p>
+				<p>tester.ftq1 -- Nhân Viên Đánh giá</p>
+				<p>tester.ktv -- Nhân Viên cải tạo</p>
+				<p>Mật khẩu: 123456</p> -->
+			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+	let btnSecond = document.getElementById('link_download_second')
+	let btnQrcode = document.getElementById('link_download_qrcode')
+	let btnLink = document.getElementById('link_download_btn')
+	updateInstallFullLinkAndQRCode("https://github.com/MobileTeamSU12/Mobimap_Android_install/raw/main/flutter/Mobimap_flutter_fix.apk", btnQrcode, btnLink, btnSecond)
+	//generateQRcode("ahihi")
+</script>
+
+
+</html>
