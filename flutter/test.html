@@ -31,13 +31,14 @@
 			<p class="fs-1"><strong>CÀI ĐẶT MOBIMAP TEST QC</strong></p>
 		</div>
 		<div class="row">
-			<div class="col-sm-6 offset-sm-2 col-md-6 offset-md-0">
-				<a
-					href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/flutter/flutter_test.plist"><img
-						src="https://github.com/MobileTeamSU12/Mobimap_Install_mobimap/blob/main/flutter/ios_qr_flutter_test.png?raw=true"
-						class="rounded mx-auto d-block img-thumbnail" alt="..."></a>
-				<a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/flutter/flutter_test.plist"
-					class="btn btn-primary btn-lg mt-3" tabindex="1" role="button" aria-disabled="false">Cài Đặt IOS
+			<div class="col-sm-6 offset-sm-2 col-md-6 offset-md-0" id="ios_region">
+				<a id="link_download_qrcode">
+					<div id="qrcode" style="height: 400pt; width: 400pt;" class="rounded mx-auto d-block img-thumbnail">
+					</div>
+				</a>
+				
+				<a id="link_download_btn" class="btn btn-primary btn-lg mt-3" tabindex="2" role="button"
+					aria-disabled="false">
 				</a>
 			</div>
 			<!-- android layout region -->
@@ -48,7 +49,7 @@
 				</a>
 				
 				<a id="link_download_btn" class="btn btn-primary btn-lg mt-3" tabindex="2" role="button"
-					aria-disabled="false">Cài Đặt Android
+					aria-disabled="false">
 				</a>
 			</div>
 			<!--/ endregion  -->
@@ -63,12 +64,23 @@
 </body>
 
 <script>
-	let btnSecond = document.getElementById('link_download_second')
-	let btnQrcode = document.getElementById('link_download_qrcode')
-	let btnLink = document.getElementById('link_download_btn')
-	updateInstallFullLinkAndQRCode("https://github.com/MobileTeamSU12/Mobimap_Android_install/raw/main/flutter/Mobimap_flutter_test.apk", btnQrcode, btnLink, btnSecond)
+	let androidRegion = document.getElementById('android_region')
+	let btnSecond = androidRegion.querySelector('#link_download_second')
+	let btnQrcode = androidRegion.querySelector('#link_download_qrcode')
+	let btnLink = androidRegion.querySelector('#link_download_btn')
+	let qrcode = androidRegion.querySelector("#qrcode")
+	generateInstallLink('Android', "https://github.com/MobileTeamSU12/Mobimap_Android_install/raw/main/flutter/Mobimap_flutter_test.apk", qrcode ,btnQrcode, btnLink, btnSecond)
+	
+	let iosRegion = document.getElementById('ios_region')
+	let btnSecondIos = iosRegion.querySelector('#link_download_second')
+	let btnQrcodeIos = iosRegion.querySelector('#link_download_qrcode')
+	let btnLinkIos = iosRegion.querySelector('#link_download_btn')
+	let qrcodeIos = iosRegion.querySelector("#qrcode")
+	generateInstallLink('IOS', "itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/flutter/flutter_test.plist", qrcodeIos ,btnQrcodeIos, btnLinkIos, btnSecondIos)
+
 	//generateQRcode("ahihi")
 </script>
+
 
 
 </html>
