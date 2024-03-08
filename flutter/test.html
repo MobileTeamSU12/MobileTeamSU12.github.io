@@ -36,7 +36,7 @@
 					<div id="qrcode" style="height: 400pt; width: 400pt;" class="rounded mx-auto d-block img-thumbnail">
 					</div>
 				</a>
-				
+
 				<a id="link_download_btn" class="btn btn-primary btn-lg mt-3" tabindex="2" role="button"
 					aria-disabled="false">
 				</a>
@@ -47,7 +47,7 @@
 					<div id="qrcode" style="height: 400pt; width: 400pt;" class="rounded mx-auto d-block img-thumbnail">
 					</div>
 				</a>
-				
+
 				<a id="link_download_btn" class="btn btn-primary btn-lg mt-3" tabindex="2" role="button"
 					aria-disabled="false">
 				</a>
@@ -61,6 +61,24 @@
 			</div>
 		</div>
 	</div>
+	<!-- info commit  -->
+	<footer class="pt-4 my-md-5 pt-md-5 border-top">
+		<div class="row ">
+			<div class="col-6 col-md">
+				<h5>Thông tin phiên bản android</h5>
+				<ul class="list-unstyled text-small" id="android_commit_info">
+					<!-- Dữ liệu từ GitHub sẽ được cập nhật ở đây -->
+				</ul>
+			</div>
+			<div class="col-6 col-md">
+				<h5>Thông tin phiên bản IOS</h5>
+				<ul class="list-unstyled text-small" id="ios_commit_info">
+					<!-- Dữ liệu từ GitHub sẽ được cập nhật ở đây -->
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!--/ endregion  -->
 </body>
 
 <script>
@@ -69,14 +87,14 @@
 	let btnQrcode = androidRegion.querySelector('#link_download_qrcode')
 	let btnLink = androidRegion.querySelector('#link_download_btn')
 	let qrcode = androidRegion.querySelector("#qrcode")
-	generateInstallLink('Android', "https://github.com/MobileTeamSU12/Mobimap_Android_install/raw/main/flutter/Mobimap_flutter_test.apk", qrcode ,btnQrcode, btnLink, btnSecond)
-	
+	generateInstallLink('Android', "https://github.com/MobileTeamSU12/Mobimap_Android_install/raw/main/flutter/Mobimap_flutter_test.apk", qrcode, btnQrcode, btnLink, btnSecond)
+
 	let iosRegion = document.getElementById('ios_region')
 	let btnSecondIos = iosRegion.querySelector('#link_download_second')
 	let btnQrcodeIos = iosRegion.querySelector('#link_download_qrcode')
 	let btnLinkIos = iosRegion.querySelector('#link_download_btn')
 	let qrcodeIos = iosRegion.querySelector("#qrcode")
-	generateInstallLink('IOS', "itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/flutter/flutter_test.plist", qrcodeIos ,btnQrcodeIos, btnLinkIos, btnSecondIos)
+	generateInstallLink('IOS', "itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/flutter/flutter_test.plist", qrcodeIos, btnQrcodeIos, btnLinkIos, btnSecondIos)
 
 	//generateQRcode("ahihi")
 </script>
