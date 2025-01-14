@@ -12,17 +12,18 @@ git push origin main
  ```
 # Thống kê thông tin giữa 2 git commit
 + lệnh: `git diff --stat hash_comit1 hash_comit2`
-# Mobimap_Install_mobimapßßß
-Dùng cài đặt mobiMap Hỗ trợ fix Bug
-https://mobileteamsu12.github.io/index
-Dùng cài đặt mobiMap Hỗ trợ tester
-https://mobileteamsu12.github.io/test
-Dùng cài đặt mobiMap Hỗ trợ UAT
-https://mobileteamsu12.github.io/uat
 
-Link Cài Đặt : itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/MobiMapVN_test.plist
-Link Web cài đặt : http://htmlpreview.github.io/?https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/MobiMap_Install_test.html
+# Mobimap_Install_mobimap
++ Dùng cài đặt mobiMap Hỗ trợ fix Bug
+ - [https://mobileteamsu12.github.io/index](https://mobileteamsu12.github.io/index)
++ Dùng cài đặt mobiMap Hỗ trợ tester
+ - [https://mobileteamsu12.github.io/test](https://mobileteamsu12.github.io/test)
++ Dùng cài đặt mobiMap Hỗ trợ UAT
+ - [https://mobileteamsu12.github.io/uat](https://mobileteamsu12.github.io/uat)
 
-https://mobileteamsu12.github.io/vn_ios_install/MobiMap_v3.32_production.ipa
++ Link Cài Đặt: `itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/MobiMapVN_test.plist`
++ Link Web cài đặt: [http://htmlpreview.github.io/?https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/MobiMap_Install_test.html](http://htmlpreview.github.io/?https://raw.githubusercontent.com/MobileTeamSU12/Mobimap_Install_mobimap/main/MobiMap_Install_test.html)
 
-https://mobileteamsu12.github.io/vn_ios_install/MobiMap_v3.33_CSOC.ipa
++ link: [https://mobileteamsu12.github.io/vn_ios_install/MobiMap_v3.32_production.ipa](https://mobileteamsu12.github.io/vn_ios_install/MobiMap_v3.32_production.ipa)
+
++ link: [https://mobileteamsu12.github.io/vn_ios_install/MobiMap_v3.33_CSOC.ipa](https://mobileteamsu12.github.io/vn_ios_install/MobiMap_v3.33_CSOC.ipa)
